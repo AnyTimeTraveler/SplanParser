@@ -1,4 +1,4 @@
-package ors.simonscode;
+package org.simonscode;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -9,7 +9,6 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Splanparser {
     public static void main(String[] args) throws Exception {
@@ -61,11 +60,12 @@ public class Splanparser {
                     i++;
                 } else if (subject.hasClass("plansched")) {
                     days.get(i).addSubject(timeString, new Subject(subject));
-                    return;
                 }
             }
         }
 
+
+        days.forEach(System.out::println);
 
 //        System.out.println(timetable.children().first());
 
