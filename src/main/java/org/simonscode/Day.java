@@ -21,7 +21,7 @@ public class Day {
     @Override
     public String toString() {
         if (subjects != null && !subjects.isEmpty()) {
-            return day + ": \n" + subjects.values().stream().flatMap(Collection::stream).map(Objects::toString).collect(Collectors.joining("\n"));
+            return day + ": \n" + subjects.entrySet().stream().map(Objects::toString).collect(Collectors.joining("\n"));
         } else {
             return day + ": {}";
         }
