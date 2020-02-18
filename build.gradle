@@ -4,9 +4,22 @@ plugins {
 }
 
 group 'org.simonscode'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
-sourceCompatibility = 11
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'SplanParser',
+                'Implementation-Version': version,
+                'Main-Class': 'org.simonscode.Splanparser'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
 
 repositories {
     mavenCentral()
