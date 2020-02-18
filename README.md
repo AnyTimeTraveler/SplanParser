@@ -9,7 +9,7 @@ into this
 
 # Usage (English)
 
-1. Download the latest build [here](https://github.com/AnyTimeTraveler/SplanParser/releases)
+1. Download the latest build [here](https://github.com/AnyTimeTraveler/SplanParser/releases/download/v1.0.0/splanparser-all-1.0.0.jar)
 2. Run the jar: `java -jar splanparser.jar [url] [repetitions]`
 3. You should see a file called `vorlesungen-[year].ics` appear in the same folder
 
@@ -21,7 +21,7 @@ repetitions: Amount of weeks in the semester
 
 # Verwendung (German)
 
-1. Downloade den aktuellsten build [here](https://github.com/AnyTimeTraveler/SplanParser/releases)
+1. Downloade den aktuellsten build [here](https://github.com/AnyTimeTraveler/SplanParser/releases/download/v1.0.0/splanparser-all-1.0.0.jar)
 2. Fuere die jar aus: `java -jar splanparser.jar [url] [repetitions]`
 3. Du solltest eine Datei namens `vorlesungen-[year].ics` im selben Ordner sehen
 
